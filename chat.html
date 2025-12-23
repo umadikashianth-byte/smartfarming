@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Community Chat</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+body{
+  background-image: url(b.jpg);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.container{
+  width:90%;
+  max-width:900px;
+  display:flex;
+  gap:20px;
+}
+
+.chat-box{
+  width:100%;
+  background:white;
+  border-radius:10px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+
+.header{
+  background:#4b6cff;
+  padding:12px;
+  text-align:center;
+  color:white;
+  font-size:18px;
+}
+
+.messages{
+  padding:10px;
+  height:350px;
+  overflow-y:auto;
+  background:#eef3ff;
+}
+
+.msg{
+  margin:7px 0;
+  padding:10px;
+  border-radius:10px;
+  max-width:70%;
+}
+
+.left{
+  background:#d1ddff;
+  align-self:flex-start;
+}
+
+.right{
+  background:#4b6cff;
+  color:white;
+  align-self:flex-end;
+}
+
+.send-box{
+  background:#ddd;
+  padding:10px;
+  display:flex;
+}
+
+.send-box input{
+  flex:1;
+  padding:10px;
+  border:none;
+  border-radius:5px;
+}
+
+.send-box button{
+  margin-left:10px;
+  padding:10px 15px;
+  border:none;
+  background:#4b6cff;
+  color:white;
+  border-radius:5px;
+  cursor:pointer;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+  <div class="chat-box">
+    <div class="header" id="headerTitle">Community Chat Room</div>
+
+    <div class="messages" id="messages">
+      <div class="msg left">Hello Everyone 👋</div>
+      <div class="msg left">Welcome to Community Chat!</div>
+    </div>
+
+    <div class="send-box">
+      <input id="text" type="text" placeholder="Type Message...">
+      <button onclick="sendMsg()">Send</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// get username
+let user = localStorage.getItem("chatUser");
+
+// if user has not joined
+if(!user){
+  window.location.href = "join.html";
+}
+
+document.getElementById("headerTitle").innerText = user + " | Community Chat";
+
+// send message
+function sendMsg(){
+  let input = document.getElementById("text");
+  let message = input.value.trim();
+
+  if(message === "") return;
+
+  let box = document.createElement("div");
+  box.className = "msg right";
+  box.innerText = user + ": " + message;
+
+  document.getElementById("messages").appendChild(box);
+
+  input.value = "";
+}
+
+// Enter key send
+document.getElementById("text").addEventListener("keydown", function(e){
+  if(e.key === "Enter"){
+    sendMsg();
+  }
+});
+</script>
+
+</body>
+</html>
