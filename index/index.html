@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Farming</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="collage.css">
+
+    <style>
+        /* LIGHT THEME */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --link-color: #1a73e8;
+            --btn-bg: #e0e0e0;
+            --btn-color: #000000;
+        }
+
+        /* DARK THEME */
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+            --link-color: #8ab4f8;
+            --btn-bg: #333333;
+            --btn-color: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a {
+            color: var(--link-color);
+        }
+
+        button {
+            background-color: var(--btn-bg);
+            color: var(--btn-color);
+            border: none;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .imgMain {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* SLIDESHOW FRAME */
+        .slideshow {
+            width: 300px;
+            height: 250px;
+            overflow: hidden;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        .slides {
+            display: flex;
+            animation: slide 25s infinite;
+        }
+
+        .slides img {
+            width: 300px;
+            height: 250px;
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+
+        @keyframes slide {
+            0%   { transform: translateX(0); }
+            10%  { transform: translateX(0); }
+            20%  { transform: translateX(-300px); }
+            30%  { transform: translateX(-300px); }
+            40%  { transform: translateX(-600px); }
+            50%  { transform: translateX(-600px); }
+            60%  { transform: translateX(-900px); }
+            70%  { transform: translateX(-900px); }
+            80%  { transform: translateX(-1200px); }
+            90%  { transform: translateX(-1200px); }
+            100% { transform: translateX(-2700px); }
+        }
+
+        /* Toggle Buttons */
+        #theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        #lang-toggle {
+            position: fixed;
+            top: 20px;
+            right: 150px;
+            z-index: 1000;
+        }
+
+        .icon-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .icon-list li {
+            display: inline;
+        }
+
+        .icon-list img {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body data-theme="light">
+
+
+
+<!-- Language Toggle -->
+<button id="lang-toggle">हिन्दी / English</button>
+
+<br>
+<!-- LOGIN BUTTON -->
+<div class="login-container">
+    <a href="style.html">
+        <button class="login-btn">Login</button>
+    </a>
+</div>
+<br>
+
+<!-- SOCIAL ICONS -->
+<div class="icon-container">
+    <ul class="icon-list">
+        <li>
+            <a href="https://x.com/AgriGoI"><img src="twitter.jpg" height="20" width="20"></a>
+            <a href="https://www.youtube.com/@IndianFarmer"><img src="youtube.jpg" height="20" width="20"></a>
+            <a href="https://web.whatsapp.com/"><img src="whatsapp.jpg" height="20" width="20"></a>
+            <a href="https://www.facebook.com/agriGoI/"><img src="facebook.jpg" height="20" width="20"></a>
+            <a href="https://www.instagram.com/agrigoi/"><img src="instagram.jpg" height="20" width="20"></a>
+        </li>
+    </ul>
+</div>
+<hr>
+
+<!-- LOGO -->
+<img src="l.jpg" height="250" width="200" class="imgMain">
+<br><br>
+
+<!-- NAVIGATION -->
+<header class="main-header">
+    <nav class="navbar" align="center">
+        <a href="index.html"><button class="btn">Home</button></a>
+        <a href="AI and Technology in Agriculure.html"><button class="btn">AI and Technology in Agriculture</button></a>
+        <a href="purches.html"><button class="btn">Purchase</button></a>
+        <a href="Government Schemes for Farmer.html"><button class="btn">Government Schemes for Farmer</button></a>
+        <br><br>
+        <a href="chat1.html"><button class="btn">Chat with Farmer</button></a>
+    </nav>
+</header>
+
+<br><br>
+
+<!-- SLIDESHOW -->
+<div class="slideshow">
+    <div class="slides">
+        <img src="f10.jpg" alt="Slide 1">
+        <img src="f9.jpg" alt="Slide 2">
+        <img src="f8.jpg" alt="Slide 3">
+        <img src="f7.jpg" alt="Slide 4">
+         <img src="f6.jpg" alt="Slide 4">
+          <img src="f5.jpg" alt="Slide 4">
+           <img src="f4.jpg" alt="Slide 4">
+            <img src="f3.jpg" alt="Slide 4">
+        
+    </div>
+</div>
+
+<br><br>
+
+<!-- PAMPHLET IMAGE -->
+<img src="pamplets.png" width="550" height="550" class="imgMain">
+
+<br><br>
+
+<!-- CONTENT -->
+<h2 align="center" id="title">ADVANTAGES OF SMART FARMING</h2>
+
+<div id="content">
+    <h4>Precision Farming:</h4>
+    <p>AI enables targeted application of water, fertilizers, and pesticides, reducing waste and environmental impact.</p>
+
+    <h4>Increased Yields & Productivity:</h4>
+    <p>Optimized planting and harvesting improve crop quality and output.</p>
+
+    <h4>Enhanced Decision-Making:</h4>
+    <p>AI analyzes weather, soil, and market data for better planning.</p>
+
+    <h4>Cost Reduction:</h4>
+    <p>Automation reduces labor costs and resource waste.</p>
+
+    <h4>Sustainability & Environment:</h4>
+    <p>Conserves water, improves soil health, and reduces emissions.</p>
+
+    <h4>Crop & Livestock Monitoring:</h4>
+    <p>Drones and sensors detect diseases and health issues early.</p>
+
+    <h4>Predictive Analytics:</h4>
+    <p>Forecasts risks, weather, and demand accurately.</p>
+
+    <h4>Automation & Robotics:</h4>
+    <p>Automates irrigation, harvesting, and weeding.</p>
+</div>
+
+<hr>
+
+<h5 align="center"><u><i>About Us</i></u></h5>
+<h5 align="center"><i>Contact us: 9503348621</i></h5>
+<h11>uday</h11>
+
+<!-- JavaScript -->
+<script>
+    
+
+
+    // LANGUAGE TOGGLE
+    const langToggle = document.getElementById('lang-toggle');
+    let isHindi = false;
+
+    langToggle.addEventListener('click', () => {
+        const title = document.getElementById('title');
+        const content = document.getElementById('content');
+
+        if(!isHindi){
+            // Hindi
+            title.textContent = "स्मार्ट फार्मिंग के फायदे";
+            content.innerHTML = `
+                <h4>सटीक खेती:</h4>
+                <p>एआई पानी, उर्वरक और कीटनाशकों का लक्ष्यित उपयोग करके अपशिष्ट और पर्यावरणीय प्रभाव को कम करता है।</p>
+                <h4>उत्पादन और उत्पादकता में वृद्धि:</h4>
+                <p>अनुकूलित रोपण और कटाई से फसल की गुणवत्ता और उत्पादन में सुधार होता है।</p>
+                <h4>बेहतर निर्णय-निर्माण:</h4>
+                <p>एआई बेहतर योजना के लिए मौसम, मिट्टी और बाजार डेटा का विश्लेषण करता है।</p>
+                <h4>लागत में कमी:</h4>
+                <p>स्वचालन श्रम लागत और संसाधन अपव्यय को कम करता है।</p>
+                <h4>सततता और पर्यावरण:</h4>
+                <p>पानी की बचत करता है, मिट्टी के स्वास्थ्य में सुधार करता है और उत्सर्जन को कम करता है।</p>
+                <h4>फसल और पशुधन निगरानी:</h4>
+                <p>ड्रोन और सेंसर बीमारियों और स्वास्थ्य समस्याओं का जल्दी पता लगाते हैं।</p>
+                <h4>पूर्वानुमान विश्लेषण:</h4>
+                <p>जोखिम, मौसम और मांग को सटीक रूप से पूर्वानुमान करता है।</p>
+                <h4>स्वचालन और रोबोटिक्स:</h4>
+                <p>सिंचाई, कटाई और निराई को स्वचालित करता है।</p>
+            `;
+        } else {
+            // English
+            title.textContent = "ADVANTAGES OF SMART FARMING";
+            content.innerHTML = `
+                <h4>Precision Farming:</h4>
+                <p>AI enables targeted application of water, fertilizers, and pesticides, reducing waste and environmental impact.</p>
+                <h4>Increased Yields & Productivity:</h4>
+                <p>Optimized planting and harvesting improve crop quality and output.</p>
+                <h4>Enhanced Decision-Making:</h4>
+                <p>AI analyzes weather, soil, and market data for better planning.</p>
+                <h4>Cost Reduction:</h4>
+                <p>Automation reduces labor costs and resource waste.</p>
+                <h4>Sustainability & Environment:</h4>
+                <p>Conserves water, improves soil health, and reduces emissions.</p>
+                <h4>Crop & Livestock Monitoring:</h4>
+                <p>Drones and sensors detect diseases and health issues early.</p>
+                <h4>Predictive Analytics:</h4>
+                <p>Forecasts risks, weather, and demand accurately.</p>
+                <h4>Automation & Robotics:</h4>
+                <p>Automates irrigation, harvesting, and weeding.</p>
+            `;
+        }
+
+        isHindi = !isHindi;
+    });
+</script>
+
+</body>
+</html>

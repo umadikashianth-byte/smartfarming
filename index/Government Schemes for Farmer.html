@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Farming</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="collage.css">
+
+    <style>
+        /* LIGHT THEME */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --link-color: #1a73e8;
+            --btn-bg: #e0e0e0;
+            --btn-color: #000000;
+        }
+
+        /* DARK THEME */
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+            --link-color: #8ab4f8;
+            --btn-bg: #333333;
+            --btn-color: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a {
+            color: var(--link-color);
+        }
+
+        button {
+            background-color: var(--btn-bg);
+            color: var(--btn-color);
+            border: none;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .imgMain {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* SLIDESHOW FRAME */
+        .slideshow {
+            width: 300px;
+            height: 250px;
+            overflow: hidden;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        .slides {
+            display: flex;
+            animation: slide 25s infinite;
+        }
+
+        .slides img {
+            width: 300px;
+            height: 250px;
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+
+        @keyframes slide {
+            0%   { transform: translateX(0); }
+            10%  { transform: translateX(0); }
+            20%  { transform: translateX(-300px); }
+            30%  { transform: translateX(-300px); }
+            40%  { transform: translateX(-600px); }
+            50%  { transform: translateX(-600px); }
+            60%  { transform: translateX(-900px); }
+            70%  { transform: translateX(-900px); }
+            80%  { transform: translateX(-1200px); }
+            90%  { transform: translateX(-1200px); }
+            100% { transform: translateX(-2700px); }
+        }
+
+        /* Toggle Buttons */
+        #theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        #lang-toggle {
+            position: fixed;
+            top: 20px;
+            right: 150px;
+            z-index: 1000;
+        }
+
+        .icon-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .icon-list li {
+            display: inline;
+        }
+
+        .icon-list img {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body data-theme="light">
+
+
+
+<!-- Language Toggle -->
+<button id="lang-toggle">हिन्दी / English</button>
+
+<br>
+<!-- LOGIN BUTTON -->
+<div class="login-container">
+    <a href="style.html">
+        <button class="login-btn">Login</button>
+    </a>
+</div>
+<br>
+
+<!-- SOCIAL ICONS -->
+<div class="icon-container">
+    <ul class="icon-list">
+        <li>
+            <a href="https://x.com/AgriGoI"><img src="twitter.jpg" height="20" width="20"></a>
+            <a href="https://www.youtube.com/@IndianFarmer"><img src="youtube.jpg" height="20" width="20"></a>
+            <a href="https://web.whatsapp.com/"><img src="whatsapp.jpg" height="20" width="20"></a>
+            <a href="https://www.facebook.com/agriGoI/"><img src="facebook.jpg" height="20" width="20"></a>
+            <a href="https://www.instagram.com/agrigoi/"><img src="instagram.jpg" height="20" width="20"></a>
+        </li>
+    </ul>
+</div>
+<hr>
+
+<!-- LOGO -->
+<img src="l.jpg" height="250" width="200" class="imgMain">
+<br><br>
+
+<!-- NAVIGATION -->
+<header class="main-header">
+    <nav class="navbar" align="center">
+        <a href="index.html"><button class="btn">Home</button></a>
+        <a href="AI and Technology in Agriculure.html"><button class="btn">AI and Technology in Agriculture</button></a>
+        <a href="purches.html"><button class="btn">Purchase</button></a>
+        <a href="Government Schemes for Farmer.html"><button class="btn">Government Schemes for Farmer</button></a>
+        <br><br>
+        <a href="chat1.html"><button class="btn">Chat with Farmer</button></a>
+    </nav>
+</header>
+      <br>
+<br>
+<h2>1} PM-KISAN Samman Nidhi Details</h2>
+<br>
+Objective: Supplement financial needs for inputs, protect from moneylenders, boost farm income.
+Benefit: ₹6,000 annually in 3 equal payments (₹2,000 each).
+Frequency: Every four months (April-July, Aug-Nov, Dec-Mar).
+Transfer: Direct Benefit Transfer (DBT) to Aadhar-linked bank accounts.
+Eligibility: Landholding farmer families, with exclusions for higher-income
+ groups/officials. 
+<br>
+<br>
+<h2>How to Access/Check</h2>
+Farmers can register and check status via the official PM-KISAN portal (pmkisan.gov.in)
+ or apps like UMANG, using Aadhaar/mobile for e-KYC.
+<br>
+<br>
+<button class="btn"><a href="https://www.pmkisan.gov.in/">PM-KISAN SAMMAN NIDHI</a><button>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="card">
+   <h2>2} KISAN CREDIT CARD</h2>
+    <h2>Features & Benefits</h2>
+    <br>
+    <br>
+    
+    <p>Purpose: Meets short-term credit needs for crop cultivation, post-harvest, marketing, and investment in allied activities (animal husbandry, fisheries).
+    <br>
+    
+    Interest Rate: Subsidized rate of 4% per annum after a 2% interest subvention and 3% prompt repayment incentive.
+    <br>
+    
+    Flexibility: Single-window system with simplified procedures, allowing farmers to draw funds as needed.
+    <br>
+    
+    Coverage: Extended to fisheries, animal husbandry, poultry, sheep/goat/pig rearing, and more.
+    
+    <br>
+    
+    Collateral-Free Loans: Limits increased (e.g., up to ₹2 lakh for fisheries, ₹1.6 lakh/₹2 lakh for others depending on terms).
+    <br>
+    
+    Insurance: Includes crop insurance, health insurance, and asset insurance.
+    
+    Ac  <br>
+    cessibility: Operable via branches, ATMs, PoS machines, etc.. 
+    
+    <h2>Who Can Apply?</h2>
+    <br>
+    
+    I
+    ndividual farmers, joint borrowers, SHGs, JLGs, women groups.
+    <br>
+    
+    Fishers, fish farmers, those with fishing licenses/permits.
+    <br>
+    
+    Poultry farmers, small ruminant farmers, dairy farmers, including tenant farmers. 
+    <br>
+    
+    <h2>How it Works</h2>
+    <br>
+    
+    
+    Provides a revolving cash credit facility, often renewed annually and valid for 5 years.
+    <br>
+    
+    Loan amount based on "Scale of Finance" (SOF) for the area/activity, decided by District/State Level Technical Committees.
+</p>
+</div>    <br>
+    <br><button class="btn"><a href="https://www.myscheme.gov.in/schemes/kcc">THE KISAN CREDIT CARD</a></button>
+        <br>
+        <BR>
+            <BR>
+                <BR>
+                    <BR>
+    <h2>3} pm-kusum scheme</h2>
+        
+            Financial Relief: Provide subsidies for solar pumps (60% subsidy, 30% loan) to replace diesel pumps, saving costs.
+            <BR>   
+            Income Generation: Allow farmers to earn from selling surplus solar power to DISCOMs (Distribution Companies).
+            <BR>   
+            Energy Security: Promote solar energy in agriculture, supporting sustainable farming. 
+            <BR>   
+                   
+            <h2>Three Main Components:</h2>
+            <BR>   
+            Component A: Setting up small (up to 2 MW) grid-connected solar power plants.
+            <BR>   
+            Component B: Installation of standalone solar pumps for irrigation.
+            <BR>   
+            Component C: Solarization (converting to solar) of existing grid-connected agricultural pumps. 
+            <BR>   
+                <BR>   
+            <H2>Benefits for Farmers:</H2>
+            <BR>   
+            Reduced Energy Costs: Replaces costly diesel with cheaper solar power.
+            <BR>   
+            Stable Income: Earn up to ₹25,000-₹65,000 per acre annually by selling power or leasing land for solar plants.
+            <BR>   
+            Empowerment: Farmers become 'Urjadata' (energy providers). 
+            <BR>   
+            Implementation:
+            
+            Managed by the Ministry of New and Renewable Energy (MNRE).
+            <BR>   
+            Central financial support of ₹34,422 crore (approx.) for targets up to March 2026.
+            
+
+
+            <br>
+            <br><button class="btn"><a href="https://pmkusum.mnre.gov.in/#/landing">THE KISAN CREDIT CARD</a></button>
+                <br>
+                <BR>
+                    <BR>
+                        <BR>
+
+                    <h2>4} PM-KMY (Pradhan Mantri Kisan Maan-Dhan Yojana)</h2>
+                <br>
+                Objective: Social security and old-age pension for SMFs.
+                <br>
+                benefits: Minimum assured pension of ₹3,000/month after age 60; 50% family pension (₹1,500) for spouse.
+                <br>
+                Eligibility: SMFs (up to 2 hectares land), aged 18-40 years.
+                <br>
+                Contribution: Voluntary & contributory; farmer & govt match contributions (₹55-₹200/month).
+                <br>
+                Fund Manager: Life Insurance Corporation of India (LIC). 
+                <br>
+                <br>
+                <button class="btn"><a href="https://agriwelfare.gov.in/en/FarmersWelDiv">PM-KMY</a></button>
+                <br>
+                <BR>
+                    <BR>        <BR>
+                        <BR>
+                            <BR>
+            <h2>4} pm-kusum scheme</h2>
+                
+                    Financial Relief: Provide subsidies for solar pumps (60% subsidy, 30% loan) to replace diesel pumps, saving costs.
+                    <BR>   
+                    Income Generation: Allow farmers to earn from selling surplus solar power to DISCOMs (Distribution Companies).
+                    <BR>   
+                    Energy Security: Promote solar energy in agriculture, supporting sustainable farming. 
+                    <BR>   
+                           
+                    <h2>Three Main Components:</h2>
+                    <BR>   
+                    Component A: Setting up small (up to 2 MW) grid-connected solar power plants.
+                    <BR>   
+                    Component B: Installation of standalone solar pumps for irrigation.
+                    <BR>   
+                    Component C: Solarization (converting to solar) of existing grid-connected agricultural pumps. 
+                    <BR>   
+                        <BR>   
+                    <H2>Benefits for Farmers:</H2>
+                    <BR>   
+                    Reduced Energy Costs: Replaces costly diesel with cheaper solar power.
+                    <BR>   
+                    Stable Income: Earn up to ₹25,000-₹65,000 per acre annually by selling power or leasing land for solar plants.
+                    <BR>   
+                    Empowerment: Farmers become 'Urjadata' (energy providers). 
+                    <BR>   
+                    Implementation:
+                    
+                    Managed by the Ministry of New and Renewable Energy (MNRE).
+                    <BR>   
+                    Central financial support of ₹34,422 crore (approx.) for targets up to March 2026.
+                    
+                    Over 20 lakh farmers already benefited, with significant increases in installations recently. 
+        
+        
+                    <br>
+                    <br><button class="btn"><a href="https://pmkusum.mnre.gov.in/#/landing">THE KISAN CREDIT CARD</a></button>
+                        <br>
+                        <BR>
